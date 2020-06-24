@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/toolbar"
+        app:title="Add dog for sale"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/image_layout"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/image_bg"
+            android:id="@+id/sell_dog_image">
+
+        </ImageView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@id/sell_dog_image"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="Photo"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/white">
+
+        </Button>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/image_layout"
+        android:id="@+id/dog_detail_layout">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Dog's name"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/sell_dog_name">
+
+        </EditText>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint="Dog's breed"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/sell_dog_name"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:id="@+id/sell_dog_breed">
+
+        </EditText>
+
+        <Spinner
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/sell_dog_breed"
+            android:layout_marginStart="30dp"
+            android:id="@+id/age_spinner"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spinner_bg">
+
+        </Spinner>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiogroup"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/age_spinner"
+            android:layout_below="@id/sell_dog_breed"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/radio_male"
+                android:theme="@style/radio"
+                android:checked="true"
+                android:textColor="@color/colorPrimaryDark">
+
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/radio_female"
+                android:theme="@style/radio"
+                android:textColor="@color/colorPrimaryDark">
+
+            </RadioButton>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/dog_detail_layout"
+        android:layout_marginTop="10dp"
+        android:id="@+id/part">
+
+    </View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/part"
+        android:layout_above="@id/add_button">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/part"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Owner Details"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:id="@+id/owner_head"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/owner_et"
+                android:layout_below="@id/owner_head"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Name"
+                android:textColor="@color/colorPrimaryDark"
+                android:inputType="textCapWords"
+                android:layout_marginTop="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/user_icon">
+
+            </EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/owner_email_et"
+                android:inputType="textEmailAddress"
+                android:layout_below="@id/owner_et"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Email"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/owner_email_icon">
+
+            </EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/owner__phone_et"
+                android:layout_below="@id/owner_email_et"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:inputType="phone"
+                android:hint="Phone"
+                android:textColor="@color/colorPrimaryDark"
+                android:digits="0123456789"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/phone_icon">
+
+            </EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/owner_city_et"
+                android:layout_below="@id/owner__phone_et"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="City"
+                android:textColor="@color/colorPrimaryDark"
+                android:inputType="textCapWords"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/city_icon">
+
+            </EditText>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:text="Add details"
+        android:id="@+id/add_button"
+        android:textColor="@color/white">
+
+    </Button>
+
+
+
+
+
+
+</RelativeLayout>

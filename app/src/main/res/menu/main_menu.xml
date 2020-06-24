@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Update_UPI"
+        android:title="Update UPI">
+    </item>
+
+    <item
+        android:id="@+id/discount"
+        android:title="Change discount">
+    </item>
+
+    <item
+        android:id="@+id/sub_plans"
+        android:title="Subscription plan">
+    </item>
+
+    <item
+        android:title="Change password"
+        android:id="@+id/change_pass">
+    </item>
+
+    <item
+        android:id="@+id/signout"
+        android:title="Sign out">
+    </item>
+
+</menu>
