@@ -1,9 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UpiDiscountPlansActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/upi_toolbar"
+        app:title="UPI, Discount and Plans"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        
+    </androidx.appcompat.widget.Toolbar>
+    
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/UPI_layout"
+       android:layout_below="@id/upi_toolbar">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:text="UPI ID"
+           android:id="@+id/upi_head"
+           android:layout_marginTop="10dp"
+           android:fontFamily="@font/bold"
+           android:textColor="@color/colorPrimaryDark"
+           android:textSize="17sp">
+
+       </TextView>
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:id="@+id/upi_et"
+           android:inputType="text"
+           android:layout_below="@id/upi_head"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="25dp"
+           android:layout_marginEnd="25dp"
+           android:background="@drawable/et_bg"
+           android:hint="UPI ID"
+           android:drawableStart="@drawable/upi_icon"
+           android:paddingStart="10dp"
+           android:paddingEnd="10dp"
+           android:drawablePadding="10dp">
+
+       </EditText>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="@color/colorPrimaryDark"
+           android:layout_below="@id/upi_et"
+           android:layout_marginTop="20dp"
+           android:id="@+id/partone">
+
+       </View>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/discount_head"
+           android:text="Discount( in % )"
+           android:fontFamily="@font/bold"
+           android:layout_centerHorizontal="true"
+           android:textColor="@color/colorPrimaryDark"
+           android:layout_below="@id/partone"
+           android:layout_marginTop="10dp"
+           android:textSize="17sp">
+
+       </TextView>
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:id="@+id/discount_et"
+           android:inputType="number"
+           android:digits="0123456789"
+           android:layout_below="@id/discount_head"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="25dp"
+           android:layout_marginEnd="25dp"
+           android:background="@drawable/et_bg"
+           android:hint="Discount"
+           android:drawableStart="@drawable/discount_icon"
+           android:paddingStart="10dp"
+           android:paddingEnd="10dp"
+           android:drawablePadding="10dp">
+
+       </EditText>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="@color/colorPrimaryDark"
+           android:layout_below="@id/discount_et"
+           android:layout_marginTop="20dp"
+           android:id="@+id/parttwo">
+
+       </View>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Subscription Plans( in Indian Rupees )"
+           android:textSize="17sp"
+           android:id="@+id/sub_head"
+           android:textColor="@color/colorPrimaryDark"
+           android:fontFamily="@font/bold"
+           android:layout_centerHorizontal="true"
+           android:layout_below="@id/parttwo"
+           android:layout_marginTop="10dp">
+
+       </TextView>
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:background="@drawable/et_bg"
+           android:hint="1 month plan"
+           android:id="@+id/one_month"
+           android:drawableStart="@drawable/sub_icon"
+           android:paddingStart="10dp"
+           android:paddingEnd="10dp"
+           android:drawablePadding="10dp"
+           android:layout_marginStart="25dp"
+           android:layout_marginEnd="25dp"
+           android:layout_below="@id/sub_head"
+           android:layout_marginTop="20dp">
+
+       </EditText>
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:background="@drawable/et_bg"
+           android:hint="6 months plan"
+           android:inputType="number"
+           android:digits="0123456789"
+           android:id="@+id/six_months"
+           android:drawableStart="@drawable/sub_icon"
+           android:paddingStart="10dp"
+           android:paddingEnd="10dp"
+           android:drawablePadding="10dp"
+           android:layout_marginStart="25dp"
+           android:layout_marginEnd="25dp"
+           android:layout_below="@id/one_month"
+           android:layout_marginTop="20dp">
+
+       </EditText>
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:background="@drawable/et_bg"
+           android:hint="1 year plan"
+           android:inputType="number"
+           android:digits="0123456789"
+           android:id="@+id/one_year"
+           android:drawableStart="@drawable/sub_icon"
+           android:paddingStart="10dp"
+           android:paddingEnd="10dp"
+           android:drawablePadding="10dp"
+           android:layout_marginStart="25dp"
+           android:layout_marginEnd="25dp"
+           android:layout_below="@id/six_months"
+           android:layout_marginTop="20dp">
+
+       </EditText>
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Confirm"
+           android:layout_alignParentBottom="true"
+           android:background="@color/colorPrimaryDark"
+           android:textColor="@color/white">
+
+       </Button>
+
+   </RelativeLayout>
+    
+    
+
+</RelativeLayout>

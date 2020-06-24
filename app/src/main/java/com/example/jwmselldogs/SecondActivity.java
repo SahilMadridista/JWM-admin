@@ -56,6 +56,9 @@ public class SecondActivity extends AppCompatActivity {
          case R.id.upi_discount_plans:
             // Add Code here
 
+            startActivity(new Intent(getApplicationContext(),UpiDiscountPlansActivity.class));
+            break;
+
 
          case R.id.change_pass:
             // Add code here

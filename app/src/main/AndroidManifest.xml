@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UpiDiscountPlansActivity"></activity>
+        <activity android:name=".UpiDiscountPlansActivity"
+            android:parentActivityName=".SecondActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ChangePasswordActivity"
             android:parentActivityName=".SecondActivity"
