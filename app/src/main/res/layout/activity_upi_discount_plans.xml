@@ -127,6 +127,8 @@
            android:layout_height="45dp"
            android:background="@drawable/et_bg"
            android:hint="1 month plan"
+           android:inputType="number"
+           android:digits="0123456789"
            android:id="@+id/one_month"
            android:drawableStart="@drawable/sub_icon"
            android:paddingStart="10dp"
