@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
          public void run() {
 
             if(loginStatus == SharedPrefConsts.USER_LOGIN){
-               startActivity(new Intent(MainActivity.this,SecondActivity.class));
+               startActivity(new Intent(MainActivity.this,SelectActivity.class));
 
             }else {
                startActivity(new Intent(MainActivity.this,LoginActivity.class));

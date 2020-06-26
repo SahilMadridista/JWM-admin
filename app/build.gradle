@@ -44,4 +44,8 @@ dependencies {
 
     implementation 'com.firebaseui:firebase-ui-firestore:6.2.1'
 
+    // Lottie
+
+    implementation 'com.airbnb.android:lottie:3.4.1'
+
 }
