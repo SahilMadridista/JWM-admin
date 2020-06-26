@@ -23,7 +23,7 @@ public class SelectActivity extends AppCompatActivity {
       doctor.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View view) {
-
+            startActivity(new Intent(getApplicationContext(),AddDoctorActivity.class));
          }
       });
 
