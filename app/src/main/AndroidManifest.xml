@@ -9,23 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddItemActivity"></activity>
-        <activity android:name=".AddDoctorActivity" />
+
+        <activity android:name=".AddItemActivity"
+            android:parentActivityName=".SelectActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".AddDoctorActivity"
+            android:parentActivityName=".SelectActivity"
+            android:screenOrientation="portrait"/>
+
         <activity android:name=".SelectActivity" />
+
         <activity
             android:name=".UpiDiscountPlansActivity"
-            android:parentActivityName=".SecondActivity"
+            android:parentActivityName=".SelectActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ChangePasswordActivity"
-            android:parentActivityName=".SecondActivity"
+            android:parentActivityName=".SelectActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".SecondActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".SelectActivity"/>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -36,6 +45,7 @@
             </intent-filter>
         </activity>
     </application>
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.INTERNET" />

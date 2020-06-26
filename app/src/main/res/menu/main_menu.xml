@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/upi_discount_plans"
-        android:title="UPI, Discount and Plans">
+        android:id="@+id/see_doc"
+        android:title="See doctors">
     </item>
 
     <item
-        android:title="Change password"
-        android:id="@+id/change_pass">
+        android:title="See items"
+        android:id="@+id/see_item">
     </item>
 
     <item
-        android:id="@+id/signout"
-        android:title="Sign out">
+        android:id="@+id/see_dogs"
+        android:title="See dogs">
     </item>
 
 </menu>

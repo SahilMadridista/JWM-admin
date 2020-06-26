@@ -8,32 +8,24 @@
     android:layout_height="match_parent"
     tools:context=".SelectActivity">
 
-    <RelativeLayout
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
-        android:id="@+id/head_layout"
-        android:background="@color/colorPrimaryDark">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select one"
-            android:layout_centerInParent="true"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:fontFamily="@font/ambit_bold">
-
-        </TextView>
+        android:id="@+id/head_toolbar"
+        app:title="Jab we mate admin"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
 
-    </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@id/head_layout"
+        android:layout_below="@id/head_toolbar"
         android:layout_above="@id/button_layout">
 
 
@@ -163,6 +155,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:id="@+id/change_pass"
             android:text="Change Password"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -183,6 +176,7 @@
             android:layout_weight="1"
             android:textColor="@color/white"
             android:text="Sign out"
+            android:id="@+id/signout"
             android:textAllCaps="false"
             android:background="@color/colorPrimaryDark">
 

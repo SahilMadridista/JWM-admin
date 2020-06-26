@@ -113,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
                        editor.apply();
 
 
-                       startActivity(new Intent(getApplicationContext(),SecondActivity.class));
+                       startActivity(new Intent(getApplicationContext(),SelectActivity.class));
                        finish();
                        progressDialog.dismiss();
                        Toast.makeText(LoginActivity.this,"Admin logged in",
